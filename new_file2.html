@@ -1,0 +1,129 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<meta charset="utf-8"> 
+<title>交互式录播器</title> 
+ <body>
+	<style>
+		body{
+
+	background-image:url('jing.jpg');
+	background-color:#cccccc;
+	background-color:#b0c4de;
+}
+.column {
+  float: left;
+  width:33.33%;
+}
+ </style>
+
+<div id="container" style="background-color:#b0c4de;width：500px;height:500px;">
+
+<div id="header" style="background-color:#FFA500;">
+<h1 style="margin-bottom:0;text-align:center;">人与自然</h1></div>
+ 
+<div class="column">
+<div id="menu" style="height:440px;background-color:black;width:120px;text-align:center;">
+<b>菜单</b><br>
+<ul>
+<li><a href="new_file.html">首页</a></li><br>
+<li><a href="lxj.html">登录界面</a></li>
+<br>
+<li><a href="new_file1.html">动物世界</a></li><br>
+<li><a href="#news">植物世界</a></li><br>
+
+<li><a href=" new_file3.html">城市世界</a></li><br>
+
+<script>
+  function yFunction(){
+	alert("基于人们对于自然界的好奇，为了满足他们的需要，本平台将汇聚着关于自然界中神奇的动植物，你可以足不出户就能了解大自然的神奇，并能与志同道合的朋友共同讨论。");
+  }
+  </script>
+
+   <input type="button" onclick="yFunction()" value="简介" />
+</ul>
+	</div>
+	</div>
+	
+	<div class="column">	<br />
+<div>
+
+<video id="video1" width="400" ;height="440";>
+    <source src="zhiwu.mp4" type="video/mp4">
+  </video>
+   </div>
+  <br />
+   <div > 
+  <button onclick="playPause()">暂停/播放</button> 
+  <button onclick="makeBig()">放大</button>
+  <button onclick="makeSmall()">缩小</button>
+  <button onclick="makeNormal()">一般</button>
+   </div>
+
+   </div>
+
+<script> 
+var myVideo=document.getElementById("video1"); 
+function playPause()
+{ 
+	if (myVideo.paused) 
+	  myVideo.play(); 
+	else 
+	  myVideo.pause(); 
+} 
+	function makeBig()
+{ 
+	myVideo.width=500; 
+} 
+	function makeSmall()
+{ 
+	myVideo.width=220; 
+} 
+	function makeNormal()
+{ 
+	myVideo.width=400; 
+} 
+</script> 
+
+
+<div class="column">	
+<div id="meu" style="height:440px;width:220px;float:right;background-color:white;text-align:center; ">
+<b>问答区</b>
+	<br>
+	<br>
+<button onclick="myFunction()">文本提问</button>
+<p id="demo"></p>
+<script>
+function myFunction(){
+	var x;
+	var person=prompt("请输入你的问题");
+	if (person!=null && person!=""){
+	    x="你的问题是： " + person ;
+	    document.getElementById("demo").innerHTML=x;
+	}
+}
+</script>
+	<button onclick="myFunction()">音频提问</button>
+		<br>
+		<br>
+	
+	<button onclick="mFunction()">视频提问</button>
+	<p id="dem"></p>
+	<script>
+function mFunction(){
+	var y;
+	var vedio=prompt("请输入你的视频");
+	if (vedio!=null &&vedio!=""){
+	    x="你的问题是： " +vedio ;
+	 document.getElementById("dem").innerHTML=y;
+	}
+}
+	</script>	</div></div>
+
+</div>
+
+</body> 
+
+
+
+</html>

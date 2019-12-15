@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>交互式录播器</title>
+</head>
+<body>
+	<style>
+	body{
+
+	background-image:url('shu.jpg');
+	background-color:#cccccc;
+	background-color:#b0c4de;
+}
+.column {
+	
+	  display: block;
+    margin: auto;
+    width: 20%;
+}
+ </style>
+ <div id="header">
+  <h1 style="margin-bottom:1;text-align:center;">交互式录播器</h1>
+
+</div>
+<div id="container" style="width：800px;">
+<div class="column">
+<div id="menu" style="height:260px;width:280px;background-color:white;text-align:center;"> 
+	<h1 style="margin-bottom:0;text-align:center;">用户登录界面</h1>
+  <form action="">
+  <br>  <br>
+       用 户: <input type="text" name="user">
+  <br>  <br>
+       密 码:  <input type="password" name="password">
+   </form>
+   <br>  
+   <button onclick="mFunction()">注册</button>
+<script>
+function mFunction()
+{
+    setTimeout(function(){alert("注册成功")},3000);
+}
+</script>
+  <br>  
+   <p><a href="new_file.html">登录</a></p>
+</div>
+</div>
+</div>
+
+</body>
+</html>
